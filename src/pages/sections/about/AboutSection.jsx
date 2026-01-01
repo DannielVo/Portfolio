@@ -4,7 +4,7 @@ import TechStack from "./TechStack";
 
 const AboutSection = () => {
   return (
-    <section id="about">
+    <section id="about" className="scroll-mt-24">
       <About />
       <TechStack />
     </section>
