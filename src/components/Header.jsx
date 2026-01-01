@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import NavItem from "./NavItem";
+import { HEADER_KEYS } from "../assets/assets";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const [activeItem, setActiveItem] = useState("Home");
 
   return (
     <>
@@ -17,10 +19,14 @@ const Header = () => {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
-            <NavItem label="Home" active />
-            <NavItem label="About" />
-            <NavItem label="Projects" />
-            <NavItem label="Contact" />
+            {HEADER_KEYS.map((item, index) => (
+              <NavItem
+                key={`header-item-${item}`}
+                label={item}
+                active={activeItem === item}
+                onClick={() => setActiveItem(item)}
+              />
+            ))}
           </nav>
 
           {/* Mobile Menu Button */}

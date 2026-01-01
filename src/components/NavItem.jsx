@@ -1,8 +1,9 @@
 import React from "react";
 
-const NavItem = ({ label, active = false }) => {
+const NavItem = ({ label, active = false, onClick }) => {
   return (
     <a
+      onClick={onClick}
       className={`cursor-pointer group relative text-sm font-medium transition-colors duration-300
         ${active ? "text-primary" : "text-text-secondary hover:text-white"}
       `}
