@@ -7,13 +7,16 @@ const Spotlight = () => {
       id="home"
       className=" flex flex-col grow justify-center relative scroll-mt-24"
     >
+      {/* Hiệu ứng nền */}
       <div className="absolute inset-0 z-0 pointer-events-none hero-pattern opacity-20"></div>
-      <div className="absolute top-20 right-0 -mr-20 -mt-20 h-[500px] w-[500px] rounded-full bg-primary/10 blur-[120px] pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 -ml-20 -mb-20 h-[400px] w-[400px] rounded-full bg-purple-500/5 blur-[100px] pointer-events-none"></div>
+      <div className="absolute top-20 right-0 -mr-20 -mt-20 h-[500px] w-[500px] rounded-full bg-primary/20 blur-[120px] pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 -ml-20 -mb-20 h-[400px] w-[400px] rounded-full bg-purple-500/15 blur-[100px] pointer-events-none"></div>
+
+      {/* Spotlight */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 py-24 lg:py-32 flex flex-col items-start justify-center min-h-[calc(100vh-80px)]">
         <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-1000">
           <div className="mb-6 inline-flex items-center rounded-full border border-[#232948] bg-[#1c2136] p-1.5 pr-5 shadow-lg shadow-black/10">
-            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-white">
+            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-white animate-spin-once">
               <span className="material-symbols-outlined text-[20px]">
                 code
               </span>

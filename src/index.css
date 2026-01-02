@@ -72,3 +72,17 @@
   background-size: 24px 24px;
   mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
+
+/* ========== SPOTLIGHT ANIMATION ========== */
+@keyframes spin-once {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-once {
+  animation: spin-once 0.8s ease-in-out forwards;
+}
