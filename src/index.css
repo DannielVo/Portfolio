@@ -6,6 +6,7 @@
 ========================================= */
 @theme {
   --color-primary: #43a8fc;
+  --color-hover: #1088e8;
   --color-background-dark: #151627;
   --color-surface-dark: #1c2136;
   --color-border-dark: #232948;
