@@ -18,6 +18,7 @@ const Spotlight = () => {
           <div className="mb-6 inline-flex items-center rounded-full border border-[#232948] bg-[#1c2136] p-1.5 pr-5 shadow-lg shadow-black/10">
             <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-white animate-spin-once">
               <span className="material-symbols-outlined text-[20px">
+                <i className="bxr  bx-code"></i>
               </span>
             </div>
             <span className="ml-3 text-sm font-medium tracking-wide text-white">
