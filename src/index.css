@@ -84,5 +84,10 @@
 }
 
 .animate-spin-once {
-  animation: spin-once 0.8s ease-in-out forwards;
+  animation: spin-once 1.2s ease-in-out forwards;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
