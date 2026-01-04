@@ -25,7 +25,7 @@ const About = () => {
               </div>
             </div>
             <div className="flex flex-col text-center md:text-left justify-center">
-              <h2 className="text-white text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-8">
+              <h2 className="text-white text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-8">
                 About Me
               </h2>
               <div className="space-y-6 text-slate-300 text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
