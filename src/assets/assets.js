@@ -10,6 +10,7 @@ import express_logo from "./express-original.jpg";
 import fastapi_logo from "./fastapi.png";
 import postgres_logo from "./postgresql.png";
 import mongodb_logo from "./mongodb-original.png";
+import logo from "./VTP_Logo-removebg-preview.png";
 
 export const assets = {
   avatar,
@@ -24,6 +25,7 @@ export const assets = {
   fastapi_logo,
   postgres_logo,
   mongodb_logo,
+  logo,
 };
 
 export const HEADER_KEYS = [

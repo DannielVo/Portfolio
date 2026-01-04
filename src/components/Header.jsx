@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import NavItem from "./NavItem";
-import { HEADER_KEYS } from "../assets/assets";
+import { assets, HEADER_KEYS } from "../assets/assets";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -44,16 +44,27 @@ const Header = () => {
     <>
       <header className="fixed top-0 z-50 w-full bg-background-dark/80 backdrop-blur-md supports-[backdrop-filter]:bg-background-dark/60 transition-all">
         <div className="mx-auto flex h-15 max-w-7xl items-center justify-between px-6 lg:px-8">
-          <a
-            href="#home"
-            onClick={(e) => {
-              e.preventDefault();
-              handleScrollTo("home", "Home");
-            }}
-            className="text-xl font-bold tracking-tight text-white hover:text-primary transition-colors"
-          >
-            Danniel Vo
-          </a>
+          <div className="flex items-center gap-3">
+            {/* Logo */}
+            <a
+              href="#home"
+              onClick={(e) => {
+                e.preventDefault();
+                handleScrollTo("home", "Home");
+              }}
+              className="flex items-center gap-3 group"
+            >
+              <img
+                src={assets.logo}
+                alt="Danniel Vo logo"
+                className="h-9 w-9 rounded-md object-contain transition-transform duration-300"
+              />
+
+              <span className="text-xl font-bold tracking-tight text-white hover:text-primary transition-colors">
+                Danniel Vo
+              </span>
+            </a>
+          </div>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
