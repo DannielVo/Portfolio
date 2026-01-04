@@ -30,13 +30,24 @@ const About = () => {
               </h2>
               <div className="space-y-6 text-slate-300 text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
                 <p>
-                  Hello! I'm Danniel, a Frontend Developer and aspiring
-                  Full-Stack developer with a strong focus on building scalable
-                  and efficient web applications. I primarily work with React
-                  and JavaScript, crafting clean, responsive, and user-friendly
-                  interfaces. I’m passionate about continuous learning,
-                  improving performance, and expanding my backend knowledge to
-                  deliver complete, real-world web solutions.
+                  Hello! I'm Danniel, a{" "}
+                  <span className="text-primary font-extrabold">
+                    Frontend Developer
+                  </span>{" "}
+                  and aspiring
+                  <span className="text-primary font-extrabold">
+                    {" "}
+                    Full-Stack Developer
+                  </span>{" "}
+                  with a strong focus on building scalable and efficient web
+                  applications. I primarily work with{" "}
+                  <span className="text-primary font-extrabold">
+                    React and JavaScript
+                  </span>
+                  , crafting clean, responsive, and user-friendly interfaces.
+                  I’m passionate about continuous learning, improving
+                  performance, and expanding my backend knowledge to deliver
+                  complete, real-world web solutions.
                 </p>
               </div>
               <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
