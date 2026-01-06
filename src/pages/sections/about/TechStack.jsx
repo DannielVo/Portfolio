@@ -22,66 +22,66 @@ const TechStack = () => {
                 <div className="flex items-center gap-3 bg-transparent rounded-lg px-4 py-3 transition-all cursor-default group/item">
                   <img
                     alt="HTML5 Logo"
-                    className="size-7 md:size-9"
+                    className="size-8 md:size-9"
                     data-alt="HTML5 orange shield logo"
                     src={assets.html_logo}
                   />
-                  <span className="text-lg md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
+                  <span className="text-xl md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
                     HTML
                   </span>
                 </div>
                 <div className="flex items-center gap-3 bg-transparent rounded-lg px-4 py-3 transition-all cursor-default group/item">
                   <img
                     alt="CSS3 Logo"
-                    className="size-7 md:size-9"
+                    className="size-8 md:size-9"
                     data-alt="CSS3 blue shield logo"
                     src={assets.css_logo}
                   />
-                  <span className="text-lg md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
+                  <span className="text-xl md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
                     CSS
                   </span>
                 </div>
                 <div className="flex items-center gap-3 bg-transparent rounded-lg px-4 py-3 transition-all cursor-default group/item">
                   <img
                     alt="JavaScript Logo"
-                    className="size-7 md:size-9 rounded-sm"
+                    className="size-8 md:size-9 rounded-sm"
                     data-alt="JavaScript yellow square logo"
                     src={assets.javascript_logo}
                   />
-                  <span className="text-lg md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
+                  <span className="text-xl md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
                     JavaScript
                   </span>
                 </div>
                 <div className="flex items-center gap-3 bg-transparent rounded-lg px-4 py-3 transition-all cursor-default group/item">
                   <img
                     alt="React Logo"
-                    className="size-7 md:size-9"
+                    className="size-8 md:size-9"
                     data-alt="React blue atom logo"
                     src={assets.react_logo}
                   />
-                  <span className="text-lg md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
+                  <span className="text-xl md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
                     React
                   </span>
                 </div>
                 <div className="flex items-center gap-3 bg-transparent rounded-lg px-4 py-3 transition-all cursor-default group/item">
                   <img
                     alt="Tailwind Logo"
-                    className="size-7 md:size-9"
+                    className="size-8 md:size-9"
                     data-alt="Tailwind CSS teal waves logo"
                     src={assets.tailwind_logo}
                   />
-                  <span className="text-lg md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
+                  <span className="text-xl md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
                     Tailwind CSS
                   </span>
                 </div>
                 <div className="flex items-center gap-3 bg-transparent rounded-lg px-4 py-3 transition-all cursor-default group/item">
                   <img
                     alt="Bootstrap Logo"
-                    className="size-7 md:size-9"
+                    className="size-8 md:size-9"
                     data-alt="Bootstrap purple B logo"
                     src={assets.bootstrap_logo}
                   />
-                  <span className="text-lg md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
+                  <span className="text-xl md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
                     Bootstrap
                   </span>
                 </div>
@@ -99,31 +99,31 @@ const TechStack = () => {
                 <div className="flex items-center gap-3 bg-transparent rounded-lg px-4 py-3 transition-all cursor-default group/item">
                   <img
                     alt="Node.js Logo"
-                    className="size-7 md:size-9"
+                    className="size-8 md:size-9"
                     data-alt="Node.js green hexagon logo"
                     src={assets.nodejs_logo}
                   />
-                  <span className="text-lg md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
+                  <span className="text-xl md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
                     Node.js
                   </span>
                 </div>
                 <div className="flex items-center gap-3 bg-transparent rounded-lg px-4 py-3 transition-all cursor-default group/item">
                   <img
                     alt="Express.js Logo"
-                    className="size-7 md:size-9 rounded-sm"
+                    className="size-8 md:size-9 rounded-sm"
                     src={assets.express_logo}
                   />
-                  <span className="text-lg md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
+                  <span className="text-xl md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
                     Express.js
                   </span>
                 </div>
                 <div className="flex items-center gap-3 bg-transparent rounded-lg px-4 py-3 transition-all cursor-default group/item">
                   <img
                     alt="FastAPI Logo"
-                    className="size-7 md:size-9"
+                    className="size-8 md:size-9"
                     src={assets.fastapi_logo}
                   />
-                  <span className="text-lg md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
+                  <span className="text-xl md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
                     FastAPI
                   </span>
                 </div>
@@ -141,22 +141,22 @@ const TechStack = () => {
                 <div className="flex items-center gap-3 bg-transparent rounded-lg px-4 py-3 transition-all cursor-default group/item">
                   <img
                     alt="PostgreSQL Logo"
-                    className="size-7 md:size-9"
+                    className="size-8 md:size-9"
                     data-alt="PostgreSQL blue elephant logo"
                     src={assets.postgres_logo}
                   />
-                  <span className="text-lg md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
+                  <span className="text-xl md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
                     PostgreSQL
                   </span>
                 </div>
                 <div className="flex items-center gap-3 bg-transparent rounded-lg px-4 py-3 transition-all cursor-default group/item">
                   <img
                     alt="MongoDB Logo"
-                    className="size-7 md:size-9"
+                    className="size-8 md:size-9"
                     data-alt="MongoDB green leaf logo"
                     src={assets.mongodb_logo}
                   />
-                  <span className="text-lg md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
+                  <span className="text-xl md:text-2xl font-medium text-gray-200 group-hover/item:text-white">
                     MongoDB
                   </span>
                 </div>
