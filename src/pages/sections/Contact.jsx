@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative flex grow w-full flex-col justify-center items-center overflow-x-hidden pt-16 scroll-mt-24"
+      className="relative flex grow w-full h-screen flex-col justify-center items-center overflow-x-hidden pt-16 scroll-mt-24"
     >
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <div className="absolute -top-[20%] left-[20%] w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px]"></div>
@@ -27,7 +27,7 @@ const Contact = () => {
           </div>
           <div className="flex flex-col w-full max-w-md gap-4 sm:flex-row sm:justify-center">
             <a
-              className="group relative flex items-center justify-center gap-2.5 w-full sm:w-auto min-w-[160px] px-6 py-3.5 text-base font-semibold text-white bg-primary hover:bg-hover rounded-lg transition-all duration-200 shadow-lg shadow-primary/20 hover:shadow-primary/40 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              className="group relative flex items-center justify-center gap-2.5 w-full sm:w-auto min-w-[160px] px-6 py-3.5 text-base font-semibold text-white bg-primary hover:bg-hover rounded-lg transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               href={LINKEDIN_URL}
               rel="noopener noreferrer"
               target="_blank"
