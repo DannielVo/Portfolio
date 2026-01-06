@@ -43,7 +43,7 @@ const Contact = () => {
             </a>
             <a
               className="group relative flex items-center justify-center w-full sm:w-auto min-w-[160px] px-6 py-3.5 text-base font-semibold text-white border border-gray-700 bg-transparent rounded-lg hover:border-primary hover:text-primary hover:-translate-y-0.5 transition-all duration-200 shadow-lg  focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-              href="mailto:hello@dannielvo.com"
+              href="mailto:trongphatvo.se@gmail.com"
             >
               <span className="material-symbols-outlined mr-2 text-[20px]">
                 mail
