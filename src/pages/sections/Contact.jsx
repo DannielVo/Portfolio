@@ -1,4 +1,3 @@
-import React from "react";
 import { LINKEDIN_URL } from "../../assets/assets";
 
 const Contact = () => {

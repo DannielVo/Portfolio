@@ -4,7 +4,6 @@ import { assets } from "../../../assets/assets";
 const About = () => {
   return (
     <div className="grow">
-      {" "}
       <section className="relative py-20 lg:py-32 px-4 md:px-10">
         <div className="absolute inset-0 z-0 pointer-events-none hero-pattern opacity-20"></div>
         <div className="absolute top-20 right-0 -mr-20 -mt-20 h-[500px] w-[500px] rounded-full bg-primary/20 blur-[120px] pointer-events-none"></div>
