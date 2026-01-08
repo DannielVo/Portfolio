@@ -1,6 +1,11 @@
 import React from "react";
 
-const ProjectCard = ({ image, title, description, tech }) => {
+const ProjectCard = ({ image, title, description, tech, demoUrl }) => {
+  const handleClick = () => {
+    if (!demoUrl) return;
+    window.open(demoUrl, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <article className="group flex flex-col bg-card-dark rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-[#292348]">
       {/* Image */}
@@ -33,11 +38,23 @@ const ProjectCard = ({ image, title, description, tech }) => {
 
         {/* Button */}
         <div className="pt-2 mt-auto">
-          <button className="w-full flex items-center justify-center gap-2 h-10 px-6 cursor-pointer bg-primary hover:bg-hover text-white rounded-lg font-bold text-sm transition-all duration-300">
-            Take a look
-            <span className="material-symbols-outlined text-lg">
-              arrow_forward
-            </span>
+          <button
+            onClick={handleClick}
+            disabled={!demoUrl}
+            className={`w-full flex items-center justify-center gap-2 h-10 px-6 rounded-lg font-bold text-sm transition-all duration-300
+              ${
+                demoUrl
+                  ? "bg-primary hover:bg-hover text-white cursor-pointer"
+                  : "bg-gray-600 text-gray-300 cursor-not-allowed"
+              }
+            `}
+          >
+            {demoUrl ? "Take a look" : "Demo coming soon"}
+            {demoUrl && (
+              <span className="material-symbols-outlined text-lg">
+                arrow_forward
+              </span>
+            )}
           </button>
         </div>
       </div>

@@ -22,6 +22,7 @@ const Projects = () => {
             title={project.title}
             description={project.description}
             tech={project.tech}
+            demoUrl={project.demoUrl}
           />
         ))}
       </div>
