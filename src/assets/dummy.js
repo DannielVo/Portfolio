@@ -6,7 +6,7 @@ export const projectsData = [
   {
     id: 1,
     image: chat_app,
-    title: "Thunder",
+    title: "Flashup",
     description:
       "A real-time chat application supporting private and group messaging, built with WebSocket for instant message delivery and smooth communication experience.",
     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "WebSocket"],
