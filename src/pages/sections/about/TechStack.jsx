@@ -25,7 +25,10 @@ const TechStack = () => {
                 </div>
                 <div className="flex-1 flex flex-wrap gap-4">
                   {section.items.map((item) => (
-                    <div className="flex items-center gap-3 bg-transparent rounded-lg px-4 py-3 transition-all cursor-default group/item">
+                    <div
+                      key={`tech-stack-item${item.name}`}
+                      className="flex items-center gap-3 bg-transparent rounded-lg px-4 py-3 transition-all cursor-default group/item"
+                    >
                       <img
                         alt={`${item.logo} Logo`}
                         className="size-8 md:size-9"
