@@ -10,6 +10,7 @@ import express_logo from "./express-original.jpg";
 import fastapi_logo from "./fastapi.png";
 import postgres_logo from "./postgresql.png";
 import mongodb_logo from "./mongodb-original.png";
+import typescript_logo from "./typescript.png";
 import logo from "./VTP_Logo-removebg-preview.png";
 import chat_app from "./chat_app.png";
 import dashboard from "./dashboard.png";
@@ -28,6 +29,7 @@ export const assets = {
   fastapi_logo,
   postgres_logo,
   mongodb_logo,
+  typescript_logo,
   logo,
   chat_app,
   dashboard,
