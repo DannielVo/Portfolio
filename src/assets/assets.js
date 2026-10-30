@@ -15,6 +15,8 @@ import logo from "./VTP_Logo-removebg-preview.png";
 import chat_app from "./chat_app.png";
 import dashboard from "./dashboard.png";
 import go_game from "./go_game.png";
+import asp_dotnet from "./ASP_dotnet.png";
+import readexa from "./Readexa.png";
 
 export const assets = {
   avatar,
@@ -30,10 +32,12 @@ export const assets = {
   postgres_logo,
   mongodb_logo,
   typescript_logo,
+  asp_dotnet,
   logo,
   chat_app,
   dashboard,
   go_game,
+  readexa,
 };
 
 export const HEADER_KEYS = [

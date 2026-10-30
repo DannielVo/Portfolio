@@ -9,7 +9,7 @@ const ProjectCard = ({ image, title, description, tech, demoUrl }) => {
   return (
     <article className="group flex flex-col bg-card-dark rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-[#292348]">
       {/* Image */}
-      <div className="w-full h-52 overflow-hidden">
+      <div className="w-full h-50 overflow-hidden">
         <img
           src={image}
           alt={title}

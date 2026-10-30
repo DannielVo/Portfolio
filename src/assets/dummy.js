@@ -1,35 +1,41 @@
 import { assets } from "./assets";
-import chat_app from "./chat_app.png";
 import dashboard from "./dashboard.png";
 import go_game from "./go_game.png";
 
 export const projectsData = [
   {
     id: 1,
-    image: chat_app,
-    title: "Flashup",
+    image: assets.readexa,
+    title: "Readexa",
     description:
-      "A real-time chat application supporting private and group messaging, built with WebSocket for instant message delivery and smooth communication experience.",
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "WebSocket"],
-    demoUrl: null,
+      "A web-based tool that helps developers easily create and customize professional GitHub profile READMEs with real-time previews, skill selection, and Markdown export.",
+    tech: ["React", "TypeScript", "Tailwind CSS"],
+    demoUrl: "https://readexa.netlify.app/",
   },
   {
     id: 2,
-    image: dashboard,
-    title: "InsightX",
-    description:
-      "A modern SaaS-style dashboard focusing on clean UI, responsive layouts, and dynamic data visualization to deliver clear and actionable insights.",
-    tech: ["Vite", "React.js", "Tailwind CSS"],
-    demoUrl: null,
-  },
-  {
-    id: 3,
     image: go_game,
     title: "Go Game",
     description:
       "A Go (Weiqi) board game implemented in Python, featuring player-vs-player and player-vs-AI modes with intelligent move evaluation.",
     tech: ["Python", "Pygame-ce", "Pillow"],
     demoUrl: "https://youtu.be/tzBjR_J5kqM?si=Gd--zbCKxSSr_DdJ",
+  },
+  {
+    id: 3,
+    image: dashboard,
+    title: "WePot",
+    description:
+      "A comprehensive web-based platform for managing multi-branch restaurant operations, featuring QR code ordering, real-time order tracking, kitchen management, and inventory control using the FEFO method. The system also integrates AI-powered smart discounts and demand forecasting to optimize inventory and reduce food waste.",
+    tech: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "FastAPI",
+    ],
+    demoUrl: null,
   },
 ];
 
