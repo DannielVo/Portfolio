@@ -49,7 +49,11 @@ const About = () => {
                 </p>
               </div>
               <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <a className="inline-flex items-center justify-center h-12 px-6 py-3.5 gap-2.5 cursor-pointer bg-primary hover:bg-hover active:bg-blue-700 text-white font-medium rounded-lg transition-all shadow-lg shadow-primary/20 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]">
+                <a
+                  href="https://drive.google.com/file/d/1IalBaLjgS0n8tpMq8u667XWPcRXc8k0H/view?usp=drive_link"
+                  target="_blank"
+                  className="inline-flex items-center justify-center h-12 px-6 py-3.5 gap-2.5 cursor-pointer bg-primary hover:bg-hover active:bg-blue-700 text-white font-medium rounded-lg transition-all shadow-lg shadow-primary/20 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+                >
                   <span className="material-symbols-outlined text-[1.25rem]">
                     article
                   </span>
