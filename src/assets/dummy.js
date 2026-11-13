@@ -1,5 +1,5 @@
 import { assets } from "./assets";
-import dashboard from "./dashboard.png";
+import wepot from "./WePot.png";
 import go_game from "./go_game.png";
 
 export const projectsData = [
@@ -18,12 +18,12 @@ export const projectsData = [
     title: "GoMind AI PC",
     description:
       "A Go (Weiqi) board game implemented in Python, featuring player-vs-player and player-vs-AI modes with intelligent move evaluation.",
-    tech: ["Python", "Pygame-ce", "Pillow"],
+    tech: ["Python", "Pygame-ce", "Pytest"],
     demoUrl: "https://youtu.be/r2gwfIkA1Qw",
   },
   {
     id: 3,
-    image: dashboard,
+    image: wepot,
     title: "WePot",
     description:
       "A comprehensive web-based platform for managing multi-branch restaurant operations, featuring QR code ordering, real-time order tracking, kitchen management, and inventory control using the FEFO method. The system also integrates AI-powered smart discounts and demand forecasting to optimize inventory and reduce food waste.",

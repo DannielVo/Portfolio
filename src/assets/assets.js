@@ -17,6 +17,7 @@ import dashboard from "./dashboard.png";
 import go_game from "./go_game.png";
 import asp_dotnet from "./ASP_dotnet.png";
 import readexa from "./Readexa.png";
+import wepot from "./WePot.png";
 
 export const assets = {
   avatar,
@@ -38,6 +39,7 @@ export const assets = {
   dashboard,
   go_game,
   readexa,
+  wepot,
 };
 
 export const HEADER_KEYS = [
