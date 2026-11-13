@@ -15,11 +15,11 @@ export const projectsData = [
   {
     id: 2,
     image: go_game,
-    title: "Go Game",
+    title: "GoMind AI PC",
     description:
       "A Go (Weiqi) board game implemented in Python, featuring player-vs-player and player-vs-AI modes with intelligent move evaluation.",
     tech: ["Python", "Pygame-ce", "Pillow"],
-    demoUrl: "https://youtu.be/tzBjR_J5kqM?si=Gd--zbCKxSSr_DdJ",
+    demoUrl: "https://youtu.be/r2gwfIkA1Qw",
   },
   {
     id: 3,
