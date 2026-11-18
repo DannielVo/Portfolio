@@ -1,9 +1,15 @@
-import React from "react";
-import { assets } from "../../assets/assets";
+import { useCallback, useState } from "react";
 import { projectsData } from "../../assets/dummy";
 import ProjectCard from "../../components/ProjectCard";
+import ProjectDetailsModal from "../../components/ProjectDetailsModal";
 
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const handleCloseModal = useCallback(() => {
+    setSelectedProject(null);
+  }, []);
+
   return (
     <section
       id="projects"
@@ -23,9 +29,15 @@ const Projects = () => {
             description={project.description}
             tech={project.tech}
             demoUrl={project.demoUrl}
+            onViewDetails={() => setSelectedProject(project)}
           />
         ))}
       </div>
+
+      <ProjectDetailsModal
+        project={selectedProject}
+        onClose={handleCloseModal}
+      />
     </section>
   );
 };
