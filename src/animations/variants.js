@@ -20,6 +20,17 @@ export const fadeDown = {
   },
 };
 
+export const fadeRight = {
+  hidden: {
+    opacity: 0,
+    x: -30,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+  },
+};
+
 export const scaleIn = {
   hidden: {
     opacity: 0,

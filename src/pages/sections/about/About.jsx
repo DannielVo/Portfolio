@@ -1,7 +1,10 @@
-import React from "react";
+import { motion, useReducedMotion } from "motion/react";
+import { fadeUp, fadeRight } from "../../../animations/variants";
 import { assets } from "../../../assets/assets";
 
 const About = () => {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <div className="grow">
       <section className="relative py-20 lg:py-32 px-4 md:px-10">
@@ -12,7 +15,17 @@ const About = () => {
 
         <div className="layout-content-container mx-auto flex max-w-300 flex-col relative z-10">
           <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-24">
-            <div className="shrink-0 relative group">
+            <motion.div
+              initial={shouldReduceMotion ? false : "hidden"}
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeRight}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+              }}
+              className="shrink-0 relative group"
+            >
               <div className="absolute inset-0 rounded-full bg-linear-to-tr from-primary to-purple-500 blur opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
               <div className="relative h-64 w-64 md:h-100 md:w-100 rounded-full border-4 border-[#232948] bg-[#111422] overflow-hidden shadow-2xl">
                 <img
@@ -21,12 +34,36 @@ const About = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </div>
+            </motion.div>
+
             <div className="flex flex-col text-center md:text-left justify-center">
-              <h2 className="text-white text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-8">
+              <motion.h2
+                initial={shouldReduceMotion ? false : "hidden"}
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.1,
+                  ease: "easeOut",
+                }}
+                className="text-white text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-8"
+              >
                 About Me
-              </h2>
-              <div className="space-y-6 text-slate-300 text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
+              </motion.h2>
+
+              <motion.div
+                initial={shouldReduceMotion ? false : "hidden"}
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.2,
+                  ease: "easeOut",
+                }}
+                className="space-y-6 text-slate-300 text-lg leading-relaxed max-w-xl mx-auto md:mx-0"
+              >
                 <p>
                   Hello! I'm Danniel, a{" "}
                   <span className="text-primary font-extrabold">
@@ -47,8 +84,20 @@ const About = () => {
                   performance, and expanding my backend knowledge to deliver
                   complete, real-world web solutions.
                 </p>
-              </div>
-              <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              </motion.div>
+
+              <motion.div
+                initial={shouldReduceMotion ? false : "hidden"}
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.3,
+                  ease: "easeOut",
+                }}
+                className="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+              >
                 <a
                   href="https://drive.google.com/file/d/1IalBaLjgS0n8tpMq8u667XWPcRXc8k0H/view?usp=drive_link"
                   target="_blank"
@@ -59,7 +108,7 @@ const About = () => {
                   </span>
                   <span>View my CV</span>
                 </a>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
