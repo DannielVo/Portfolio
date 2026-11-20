@@ -69,9 +69,15 @@
    HERO PATTERN
 ========================================= */
 .hero-pattern {
-  background-image: radial-gradient(#232948 1px, transparent 1px);
+  background-image: radial-gradient(#36415b 1px, transparent 1px);
   background-size: 24px 24px;
-  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 55%,
+    transparent 100%
+  );
 }
 
 /* ========== SPOTLIGHT ANIMATION ========== */
@@ -91,4 +97,14 @@
 html,
 body {
   overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-spin-once {
+    animation: none;
+  }
 }

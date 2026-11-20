@@ -1,7 +1,10 @@
-import React from "react";
+import { motion, useReducedMotion } from "motion/react";
+import { heroContainer, heroItem } from "../../animations/variants";
 import { GITHUB_URL, LINKEDIN_URL } from "../../assets/assets";
 
 const Spotlight = () => {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <section
       id="home"
@@ -9,13 +12,80 @@ const Spotlight = () => {
     >
       {/* Hiệu ứng nền */}
       <div className="absolute inset-0 z-0 pointer-events-none hero-pattern opacity-20"></div>
-      <div className="absolute top-20 right-0 -mr-20 -mt-20 h-[500px] w-[500px] rounded-full bg-primary/20 blur-[120px] pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 -ml-20 -mb-20 h-[400px] w-[400px] rounded-full bg-purple-500/15 blur-[100px] pointer-events-none"></div>
+
+      {/* Background Effects */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-0 pointer-events-none hero-pattern opacity-20"
+      />
+
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-0 pointer-events-none overflow-hidden"
+      >
+        {/* Blue Glow */}
+        <motion.div
+          className="
+            absolute top-[5%] right-[-10%]
+            w-[500px] h-[500px]
+            md:w-[700px] md:h-[700px]
+            rounded-full bg-primary/20 blur-[120px]
+            will-change-transform
+          "
+          animate={
+            shouldReduceMotion
+              ? undefined
+              : {
+                  x: [0, -45, 0],
+                  y: [0, 35, 0],
+                  scale: [1, 1.08, 1],
+                }
+          }
+          transition={{
+            duration: 16,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+
+        {/* Purple Glow */}
+        <motion.div
+          className="
+            absolute bottom-[-20%] left-[-10%]
+            w-[400px] h-[400px]
+            md:w-[600px] md:h-[600px]
+            rounded-full bg-purple-500/15 blur-[110px]
+            will-change-transform
+          "
+          animate={
+            shouldReduceMotion
+              ? undefined
+              : {
+                  x: [0, 35, 0],
+                  y: [0, -30, 0],
+                  scale: [1, 1.12, 1],
+                }
+          }
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      </div>
 
       {/* Spotlight */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 py-24 lg:py-32 flex flex-col items-start justify-center min-h-[calc(100vh-80px)]">
-        <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-1000">
-          <div className="mb-6 inline-flex items-center rounded-full border border-[#232948] bg-[#1c2136] p-1.5 pr-5 shadow-lg shadow-black/10">
+        <motion.div
+          variants={heroContainer}
+          initial={shouldReduceMotion ? false : "hidden"}
+          animate="visible"
+          className="max-w-3xl"
+        >
+          <motion.div
+            variants={heroItem}
+            className="mb-6 inline-flex items-center rounded-full border border-[#232948] bg-[#1c2136] p-1.5 pr-5 shadow-lg shadow-black/10"
+          >
             <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-white animate-spin-once">
               <span className="material-symbols-outlined text-[20px">
                 <i className="bxr  bx-code"></i>
@@ -24,19 +94,28 @@ const Spotlight = () => {
             <span className="ml-3 text-sm font-medium tracking-wide text-white">
               Frontend Developer
             </span>
-          </div>
-          <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-7xl mb-6 leading-tight">
+          </motion.div>
+
+          <motion.h1
+            variants={heroItem}
+            className="text-5xl font-extrabold tracking-tight text-white sm:text-7xl mb-6 leading-tight"
+          >
             Hi, I’m{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">
               Danniel
             </span>
-          </h1>
-          <p className="mt-2 max-w-2xl text-lg leading-8 text-gray-400 mb-10">
+          </motion.h1>
+
+          <motion.p
+            variants={heroItem}
+            className="mt-2 max-w-2xl text-lg leading-8 text-gray-400 mb-10"
+          >
             Passionate Frontend Developer with experience in React, focusing on
             building clean and responsive user interfaces, and currently
             expanding my skills toward full-stack development.
-          </p>
-          <div className="flex flex-wrap gap-4">
+          </motion.p>
+
+          <motion.div variants={heroItem} className="flex flex-wrap gap-4">
             <a
               className="group flex items-center justify-center gap-2.5 rounded-lg bg-primary px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-primary/25 transition-all hover:bg-hover hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               href={LINKEDIN_URL}
@@ -72,9 +151,31 @@ const Spotlight = () => {
               </svg>
               <span>GitHub</span>
             </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
+
+      <motion.a
+        href="#about"
+        aria-label="Scroll to About section"
+        initial={shouldReduceMotion ? false : { opacity: 0, y: -8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 1.1 }}
+        className="
+            absolute bottom-8 left-1/2 -translate-x-1/2
+            hidden md:flex flex-col items-center gap-2
+            text-text-secondary hover:text-primary
+            transition-colors
+          "
+      >
+        <span className="text-xs uppercase tracking-[0.2em]">
+          Scroll to explore
+        </span>
+
+        <span className="material-symbols-outlined text-2xl">
+          keyboard_arrow_down
+        </span>
+      </motion.a>
     </section>
   );
 };

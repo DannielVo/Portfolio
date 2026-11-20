@@ -50,3 +50,30 @@ export const staggerContainer = {
     },
   },
 };
+
+export const heroContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      delayChildren: 0.15,
+      staggerChildren: 0.12,
+    },
+  },
+};
+
+export const heroItem = {
+  hidden: {
+    opacity: 0,
+    y: 24,
+    filter: "blur(6px)",
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: {
+      duration: 0.65,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
