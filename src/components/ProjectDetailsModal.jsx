@@ -1,9 +1,12 @@
 import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
+import { motion, useReducedMotion } from "motion/react";
+import { backdropVariants, modalVariants } from "../animations/variants";
 
 const ProjectDetailsModal = ({ project, onClose }) => {
   const modalRef = useRef(null);
   const closeButtonRef = useRef(null);
+  const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
     if (!project) return;
@@ -80,21 +83,46 @@ const ProjectDetailsModal = ({ project, onClose }) => {
   };
 
   return createPortal(
-    <div
+    <motion.div
+      variants={backdropVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      transition={{ duration: 0.25 }}
       className="
-        fixed inset-0 z-50
-        bg-[#0d0e1a]/85 backdrop-blur-sm
-        flex items-center justify-center
-        p-4 md:p-6
-      "
+      fixed inset-0 z-50
+      bg-[#0d0e1a]/85 backdrop-blur-sm
+      flex items-center justify-center
+      p-4 md:p-6
+    "
       onMouseDown={handleBackdropClick}
     >
-      <div
+      <motion.div
         ref={modalRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby="project-modal-title"
         tabIndex={-1}
+        variants={modalVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        transition={
+          shouldReduceMotion
+            ? { duration: 0 }
+            : {
+                visible: {
+                  type: "spring",
+                  stiffness: 280,
+                  damping: 28,
+                  mass: 0.9,
+                },
+                exit: {
+                  duration: 0.2,
+                  ease: "easeIn",
+                },
+              }
+        }
         className="
           relative w-full max-w-[900px] max-h-[90vh]
           bg-card-dark
@@ -279,8 +307,8 @@ const ProjectDetailsModal = ({ project, onClose }) => {
             </section>
           )}
         </div>
-      </div>
-    </div>,
+      </motion.div>
+    </motion.div>,
     document.body,
   );
 };

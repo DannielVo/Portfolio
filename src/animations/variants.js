@@ -77,3 +77,43 @@ export const heroItem = {
     },
   },
 };
+
+export const backdropVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+  exit: {
+    opacity: 0,
+  },
+};
+
+export const modalVariants = {
+  hidden: {
+    opacity: 0,
+    scale: 0.96,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 280,
+      damping: 28,
+      mass: 0.9,
+    },
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.97,
+    y: 10,
+    transition: {
+      duration: 0.2,
+      ease: "easeIn",
+    },
+  },
+};

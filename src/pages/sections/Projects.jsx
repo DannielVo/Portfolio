@@ -2,8 +2,8 @@ import { useCallback, useState } from "react";
 import { projectsData } from "../../assets/dummy";
 import ProjectCard from "../../components/ProjectCard";
 import ProjectDetailsModal from "../../components/ProjectDetailsModal";
-import { motion, useReducedMotion } from "motion/react";
 import { fadeUp, staggerContainer } from "../../animations/variants";
+import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 
 const Projects = () => {
   const shouldReduceMotion = useReducedMotion();
@@ -57,10 +57,15 @@ const Projects = () => {
         ))}
       </motion.div>
 
-      <ProjectDetailsModal
-        project={selectedProject}
-        onClose={handleCloseModal}
-      />
+      <AnimatePresence mode="wait">
+        {selectedProject && (
+          <ProjectDetailsModal
+            key={selectedProject.id}
+            project={selectedProject}
+            onClose={handleCloseModal}
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 };
